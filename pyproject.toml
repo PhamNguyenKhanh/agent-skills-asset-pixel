@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixel-forge"
+version = "1.0.0"
+description = "Unified 2D Pixel Art & Animation Studio (Python + CLI + Agent Skills + PNG/GIF/Aseprite/Unity Exporters)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "httpx>=0.27.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+accel = [
+    "scipy>=1.11.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+pixelforge = "pixel_forge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

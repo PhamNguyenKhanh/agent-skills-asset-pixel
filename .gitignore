@@ -1,0 +1,28 @@
+# Reference repositories (read-only local archive)
+_reference_repos/
+pixel-studio/
+
+# Runtime state, spend ledger, generated outputs
+.forge/
+output/
+tmp/
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
